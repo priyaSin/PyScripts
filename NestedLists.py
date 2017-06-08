@@ -6,8 +6,10 @@ alphabetically and print each name on a new line."""
 arr=[]
 lowest=100
 seclowest=100
-for i in range(int(input())):
+for i in range(int(input("Enter the number of students in Physics class: "))):
+    print ("Enter the name of student number"+str(i))
     name = input()
+    print ("Enter the score of "+name)
     score = float(input())
     if score<lowest:
         lowest,seclowest=score,lowest
@@ -15,6 +17,7 @@ for i in range(int(input())):
         seclowest=score
     arr.append([name,score])
     arr.sort()
+print ("The following students have the second lowest scores:")
 for row in arr:
     if row[1]==seclowest:
         print (row[0])
